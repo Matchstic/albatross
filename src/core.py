@@ -15,7 +15,6 @@ class ExecutionState(str, Enum):
     Stop           = "STOP"
 
 class Core:
-
     vehicle: Vehicle = None
     camera: BaseCamera = None
     statemachine: StateMachine = StateMachine()
@@ -55,7 +54,7 @@ class Core:
         while stopped == False:
             stopped = self.statemachine.update(self.vehicle, self.camera) == ExecutionState.Stop
 
-            time.sleep(1)
+            time.sleep(0.02)
 
     def stop(self) -> None:
         self.statemachine.stop()
