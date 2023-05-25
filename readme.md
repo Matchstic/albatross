@@ -4,6 +4,11 @@ A [microtransat](https://www.microtransat.org/) attempt.
 
 Probably will use [Icarous](https://github.com/nasa/icarous/tree/master) later on.
 
+## TODO
+
+- Fix fping module in MAVProxy (it only finds IPs on first interface from ifconfig. e.g., misses WiFi)
+- Import weirdness in src/camera/base.py
+
 ## Setup 
 
 Follow https://www.hackster.io/Matchstic/connecting-pixhawk-to-raspberry-pi-and-nvidia-jetson-b263a7 to setup PixHawk comms
