@@ -1,0 +1,12 @@
+[Unit]
+Description=Optional VPN start script
+
+[Service]
+ExecStart=/home/pi/albatross/4gvpn.sh
+Restart=on-failure
+StandardOutput=inherit
+StandardError=inherit
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

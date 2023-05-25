@@ -1,0 +1,12 @@
+[Unit]
+Description=MAVProxy startup script
+
+[Service]
+ExecStart=mavproxy.py --out 127.0.0.1:14550 --master=/dev/ttyAMA0 --baudrate 115200  --daemon --load-module fping
+Restart=on-failure
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
