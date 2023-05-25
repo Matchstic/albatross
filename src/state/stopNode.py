@@ -1,7 +1,7 @@
 from typing import Optional
 from .baseNode import BaseNode
 
-from . import Data, ExecutionState
+from .types import Data, ExecutionState
 
 class StopNode(BaseNode):
     def __init__(self):

@@ -3,7 +3,7 @@ from typing import Optional
 from .baseNode import BaseNode
 from .cameraSnaphotNode import CameraSnapshotNode
 
-from . import Data, ExecutionState
+from .types import Data, ExecutionState
 
 class StartNode(BaseNode):
     def __init__(self):

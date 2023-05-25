@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import Optional
 
-from . import Hardware, Data, ExecutionState
+from .types import Hardware, Data, ExecutionState
 
 class BaseNode:
     state: ExecutionState = None

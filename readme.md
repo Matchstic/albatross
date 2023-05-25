@@ -6,7 +6,7 @@ Probably will use [Icarous](https://github.com/nasa/icarous/tree/master) later o
 
 ## TODO
 
-- Fix fping module in MAVProxy (it only finds IPs on first interface from ifconfig. e.g., misses WiFi)
+- Fix fping module in MAVProxy (it only finds IPs on first interface from ifconfig. e.g., misses wlan0)
 - Import weirdness in src/camera/base.py
 
 ## Setup 

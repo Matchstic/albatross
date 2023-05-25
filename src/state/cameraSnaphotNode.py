@@ -4,7 +4,7 @@ from typing import Optional
 from .baseNode import BaseNode
 from .stopNode import StopNode
 
-from . import Hardware, Data, ExecutionState
+from .types import Hardware, Data, ExecutionState
 
 class CameraSnapshotNode(BaseNode):
     def __init__(self):

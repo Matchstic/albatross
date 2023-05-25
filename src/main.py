@@ -12,6 +12,7 @@ from core import Core
 from camera import setupCamera
 from camera.base import BaseCamera
 from utils.logging import setupLogging
+from constants import TIMELAPSE_INTERVAL_MS
 
 import argparse
 import time
@@ -60,7 +61,7 @@ def main(args):
     signal.signal(signal.SIGTERM, signal_handler)
 
     setupLogging(args.log_path, PARENT_DIRECTORY)
-    camera = setupCamera(args.timelapse_path)
+    camera = setupCamera(args.timelapse_path, TIMELAPSE_INTERVAL_MS)
 
     if not EXIT:
         logging.info("Starting core")

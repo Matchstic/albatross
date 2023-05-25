@@ -1,7 +1,6 @@
 import os
 import threading
 import time
-from ..constants import TIMELAPSE_INTERVAL_MS
 
 THREAD_STOP = False
 RUNNING     = False
@@ -32,8 +31,9 @@ class BaseCamera:
 
     _thread = None
 
-    def __init__(self, directory):
+    def __init__(self, directory, interval):
         self.directory = directory
+        self.interval = interval
 
         if not os.path.exists(directory):
             os.makedirs(directory)
@@ -47,7 +47,7 @@ class BaseCamera:
         return RUNNING
 
     def start(self):
-        self._thread = threading.Thread(target=thread, args=(self.snapshot, TIMELAPSE_INTERVAL_MS))
+        self._thread = threading.Thread(target=thread, args=(self.snapshot, self.interval))
         self._thread.start()
 
     def stop(self):

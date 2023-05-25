@@ -1,28 +1,10 @@
-from enum import Enum
-from dataclasses import dataclass
-
 from .baseNode import BaseNode
 from .startNode import StartNode
 from .stopNode import StopNode
+from .types import Hardware, ExecutionState
+from camera.base import BaseCamera
 
-from ..camera.base import BaseCamera
 from dronekit import Vehicle
-
-@dataclass
-class Hardware:
-    camera: BaseCamera
-    vehicle: Vehicle
-
-@dataclass
-class Data:
-    armed: bool
-    connected: bool
-
-class ExecutionState(str, Enum):
-    Unknown        = "UNKNOWN"
-    Init           = "INIT"
-    Camera         = "CAMERA"
-    Stop           = "STOP"
 
 class StateMachine:
     currentNode: BaseNode = None
