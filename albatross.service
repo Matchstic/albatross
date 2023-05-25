@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Environment="HOME=/home/pi/"
-ExecStart=/usr/local/bin/python3.9 main.py --uri 127.0.0.1:14550 --timelapse_path /home/pi/albatross/timelapse --log_path /home/pi/albatross/logs
+ExecStart=python main.py --uri 127.0.0.1:14550 --timelapse_path /home/pi/albatross/timelapse --log_path /home/pi/albatross/logs
 Restart=on-failure
 WorkingDirectory=/home/pi/albatross/src/
 StandardOutput=inherit
